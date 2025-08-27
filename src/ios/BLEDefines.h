@@ -11,6 +11,13 @@
  
  */
 
+// MPT II Service
+// For MPT II Printer
+#define MPT2_SERVICE_UUID                         "E7810A71-73AE-499D-8C15-FAA9AEF0C3F2"
+#define MPT2_CHAR_TX_UUID                         "0xBEF8D6C9-9C21-4C9E-B632-BD58C1009F9F"
+#define MPT2_CHAR_RX_UUID                         "0xBEF8D6C9-9C21-4C9E-B632-BD58C1009F9F"
+
+
 // BlueGiga Service
 #define BLUEGIGA_SERVICE_UUID                         "1D5688DE-866D-3AA4-EC46-A1BDDB37ECF6"
 #define BLUEGIGA_CHAR_TX_UUID                         "AF20fBAC-2518-4998-9AF7-AF42540731B3"
@@ -47,3 +54,4 @@
 #define HC02_ADV_UUID "18F0"
 
 #define RBL_BLE_FRAMEWORK_VER                    0x0200
+
