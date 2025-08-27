@@ -26,6 +26,7 @@ static int rssi = 0;
 
 // TODO should have a configurable list of services
 CBUUID *redBearLabsServiceUUID;
+CBUUID *mpt2ServiceUUID;
 CBUUID *adafruitServiceUUID;
 CBUUID *lairdServiceUUID;
 CBUUID *blueGigaServiceUUID;
@@ -537,6 +538,13 @@ static bool done = false;
                 serialServiceUUID = redBearLabsServiceUUID;
                 readCharacteristicUUID = [CBUUID UUIDWithString:@RBL_CHAR_TX_UUID];
                 writeCharacteristicUUID = [CBUUID UUIDWithString:@RBL_CHAR_RX_UUID];
+                break;
+            }
+            else if ([service.UUID isEqual:mpt2ServiceUUID]) {
+                NSLog(@"MPT II LE");
+                serialServiceUUID = mpt2ServiceUUID;
+                readCharacteristicUUID = [CBUUID UUIDWithString:@MPT2_CHAR_TX_UUID];
+                writeCharacteristicUUID = [CBUUID UUIDWithString:@MPT2_CHAR_RX_UUID];
                 break;
             } else if ([service.UUID isEqual:adafruitServiceUUID]) {
                 NSLog(@"Adafruit Bluefruit LE");
